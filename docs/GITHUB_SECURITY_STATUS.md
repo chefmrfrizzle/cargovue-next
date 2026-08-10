@@ -19,8 +19,8 @@ planned. Update it whenever the repository moves to an organization or its plan 
 - dependency vulnerability alerts enabled;
 - automated security fixes enabled;
 - squash merge only; branch deletion after merge enabled;
-- CodeQL workflow present and being evaluated by GitHub;
 - local/CI checks for formatting, types, unit tests, PCE refusals, and obvious legacy/secret material.
+- CI vulnerability checks using `npm audit` plus Python package consistency using `pip check`.
 
 ## Blocked by the current GitHub account/plan
 
@@ -35,7 +35,9 @@ and CODEOWNERS express the desired policy:
 - required signed commits.
 
 Private vulnerability reporting returned HTTP 404 and is not confirmed active. Secret scanning and
-push protection are also not confirmed active for this private personal repository.
+push protection are also not confirmed active for this private personal repository. GitHub CodeQL and
+dependency review are not active because private-repository support is unavailable on the current plan;
+their workflows were not left enabled to create misleading permanently failing checks.
 
 ## Required correction before collaborators or production
 

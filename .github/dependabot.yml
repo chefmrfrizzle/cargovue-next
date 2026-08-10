@@ -9,6 +9,10 @@ updates:
         dependency-type: production
       javascript-development:
         dependency-type: development
+    ignore:
+      # TypeScript 7 is not supported by the current typescript-eslint peer contract.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: pip
     directory: /apps/pce-service
     schedule:

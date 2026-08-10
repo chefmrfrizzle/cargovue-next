@@ -1,0 +1,42 @@
+{
+  "name": "cargovue-next",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Greenfield proof-carrying LNG evidence workspace.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:api": "npm run dev --workspace @cargovue/api",
+    "dev:public": "npm run dev --workspace @cargovue/public-web",
+    "dev:workspace": "npm run dev --workspace @cargovue/workspace-web",
+    "dev:portal": "npm run dev --workspace @cargovue/portal-web",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test": "npm run test --workspaces --if-present",
+    "test:pce": "python -m pytest apps/pce-service/tests -q",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "verify:boundaries": "node scripts/verify-boundaries.mjs",
+    "verify": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run test:pce && npm run verify:boundaries"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.2.0",
+    "eslint": "10.8.1",
+    "prettier": "3.9.6",
+    "tsx": "4.23.12",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.67.0",
+    "vitest": "4.1.10"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

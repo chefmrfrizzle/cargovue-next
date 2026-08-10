@@ -1,0 +1,9 @@
+name: Private security report reminder
+description: Do not disclose vulnerabilities in a public issue.
+title: "DO NOT SUBMIT SECRETS HERE"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stop. Follow SECURITY.md and use GitHub private vulnerability reporting.
+        Never paste credentials, customer evidence, or exploit details into an issue.

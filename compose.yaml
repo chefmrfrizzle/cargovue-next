@@ -1,0 +1,40 @@
+name: cargovue-next
+
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: cargovue
+      POSTGRES_USER: cargovue_local
+      POSTGRES_PASSWORD: cargovue_local_only
+    ports:
+      - "5432:5432"
+    volumes:
+      - cargovue_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cargovue_local -d cargovue"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: cargovue_local
+      MINIO_ROOT_PASSWORD: cargovue_local_only
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - cargovue_minio:/data
+
+  clamav:
+    image: clamav/clamav:stable
+    profiles: ["hostile-file-scanning"]
+    ports:
+      - "3310:3310"
+
+volumes:
+  cargovue_postgres:
+  cargovue_minio:

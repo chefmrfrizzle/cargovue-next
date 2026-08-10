@@ -1,0 +1,13 @@
+{
+  "fixtureVersion": "1.0",
+  "synthetic": true,
+  "tenantId": "tenant:synthetic-blue",
+  "matterId": "matter:synthetic-aurora-001",
+  "title": "Synthetic Aurora LNG evidence qualification",
+  "notice": "Fictional test data. Not based on an identifiable cargo, vessel, party, or claim.",
+  "expectedBehaviors": [
+    "source bytes are hashed before review",
+    "unsupported PCE method is refused",
+    "draft content is never visible in the portal"
+  ]
+}

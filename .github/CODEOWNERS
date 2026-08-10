@@ -1,0 +1,6 @@
+# Replace this personal bootstrap owner with GitHub teams before production work begins.
+* @chefmrfrizzle
+
+/docs/decisions/ @chefmrfrizzle
+/apps/pce-service/ @chefmrfrizzle
+/.github/ @chefmrfrizzle

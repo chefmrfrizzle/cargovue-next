@@ -1,0 +1,33 @@
+name: Feature proposal
+description: Propose a bounded, testable capability.
+title: "[Feature]: "
+labels: ["needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem exists? Do not start with a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and user
+      description: Who has the problem, and what evidence supports it?
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Trust boundaries
+      description: What data, identity, scientific, AI, or release boundaries are affected?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance and refusal cases
+      description: What must work, and when must the system refuse?
+    validations:
+      required: true

@@ -15,11 +15,12 @@ plain language and gives you exact commands.
 If you are changing the system, read these files in order:
 
 1. [AGENTS.md](AGENTS.md) — rules that code and AI assistants cannot break.
-2. [Product charter](docs/PRODUCT_CHARTER.md) — what the product is and is not.
-3. [Architecture](docs/ARCHITECTURE.md) — how the pieces are separated.
-4. [Migration ledger](docs/MIGRATION_LEDGER.md) — lessons accepted or rejected from the old work.
-5. [Security model](docs/SECURITY_MODEL.md) — threats and controls.
-6. [Delivery roadmap](docs/DELIVERY_ROADMAP.md) — the safe build order.
+2. [Repository charter](docs/REPOSITORY_CHARTER.md) — what belongs in this clean repository.
+3. [Product charter](docs/PRODUCT_CHARTER.md) — what the product is and is not.
+4. [Architecture](docs/ARCHITECTURE.md) — how the pieces are separated.
+5. [Migration ledger](docs/MIGRATION_LEDGER.md) — lessons accepted or rejected from the old work.
+6. [Security model](docs/SECURITY_MODEL.md) — threats and controls.
+7. [Delivery roadmap](docs/DELIVERY_ROADMAP.md) — the safe build order.
 
 ## Repository map
 

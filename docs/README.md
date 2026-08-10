@@ -13,7 +13,8 @@ These documents are part of the product. A code change that contradicts them is 
 7. `TEST_STRATEGY.md` — how claims about software behavior are proven.
 8. `DELIVERY_ROADMAP.md` — safe order of work.
 9. `TRUST_CENTER_CHECKLIST.md` — evidence needed for institutional diligence.
-10. `GLOSSARY.md` — shared language.
+10. `GITHUB_SECURITY_STATUS.md` — controls actually active on the current repository.
+11. `GLOSSARY.md` — shared language.
 
 Permanent, difficult-to-reverse decisions live in `decisions/`. Task-specific AI instructions live in
 `prompts/`; prompts cannot override product or security policy.
